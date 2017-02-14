@@ -7,6 +7,7 @@ var currentLogo = 0;
 var count = 0;
 var logos =
 [
+  { png: 'png/yes.png', color: '#ff9600'},
   { png: 'png/2017.png', color: '#63ff00'},
   { png: 'png/marcthenarc.png', color: 'yellow'},
   { png: 'png/twitch.png', color: '#9b65ff' },
