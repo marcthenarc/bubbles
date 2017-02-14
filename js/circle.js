@@ -10,7 +10,15 @@ function Circle(v, r)
   this.upperLimit = 999999;
 }
 
-Circle.prototype.SetColor = function ()
+Circle.prototype.SetPos = function(v)
+{
+  // Perform deep copy
+  this.pos.x = v.x;
+  this.pos.y = v.y;
+  this.pos.z = v.z;
+}
+
+Circle.prototype.SetColor = function()
 {
   switch (arguments.length)
   {
