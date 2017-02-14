@@ -31,18 +31,20 @@ Bezier.prototype.SetLineWidth = function(width)
 
 Bezier.prototype.Draw = function()
 {
-  ctx.beginPath();
-  ctx.moveTo(this.points[0].x, this.points[0].y);
-  ctx.bezierCurveTo(
+  var c = (arguments.length) ? arguments[0] : ctx;
+
+  c.beginPath();
+  c.moveTo(this.points[0].x, this.points[0].y);
+  c.bezierCurveTo(
     this.points[1].x, this.points[1].y,
     this.points[2].x, this.points[2].y,
     this.points[3].x, this.points[3].y
   );
 
-  ctx.stokeStyle = this.color;
-  ctx.lineWidth = this.width;
-
-  ctx.stroke();
+  c.strokeStyle = this.color;
+  c.lineWidth = this.width;
+  c.stroke();
+  c.closePath();
 }
 
 Bezier.prototype.GetPath = function(accuracy)
