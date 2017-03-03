@@ -58,6 +58,7 @@ Circle.prototype.Draw = function()
   c.lineWidth = this.lineWidth;
   c.strokeStyle = this.outer;
   c.stroke();
+  c.closePath();
 }
 
 Circle.prototype.SetSizeLimits = function(lower, higher)
